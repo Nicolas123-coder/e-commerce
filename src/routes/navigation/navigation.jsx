@@ -6,14 +6,7 @@ import { UserContext } from "../../components/contexts/user"
 import { signOutUser } from "../../utils/firebase/firebase"
 
 const Navigation = () => {
-  const { currentUser, setCurrentUser } = useContext(UserContext)
-  console.log('opa',currentUser)
-
-  const signOutHandler = async () => {
-    await signOutUser()
-
-    setCurrentUser(null)
-  }
+  const { currentUser } = useContext(UserContext)
 
     return (
       <Fragment>
@@ -27,7 +20,7 @@ const Navigation = () => {
                 </Link>
                 {
                   currentUser ? (
-                    <span className='link' onClick={signOutHandler}>SIGN OUT</span>
+                    <span className='link' onClick={signOutUser}>SIGN OUT</span>
                   ) : (
                     <Link className="link" to='/auth'>
                       SIGN IN
