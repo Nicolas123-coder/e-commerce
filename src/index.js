@@ -5,13 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { UserProvider } from './components/contexts/user';
+import { ProductsProvider } from './components/contexts/products';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <UserProvider>
-        <App />
+        <ProductsProvider>  {/*Esse context ta aqui pq a gente pode pegar valores do usuario nesta ordem de declaração, os produtos pode chegar ao user provider e usar seus dados*/}
+          <App />
+        </ProductsProvider>
       </UserProvider>
     </BrowserRouter>
   </React.StrictMode>
