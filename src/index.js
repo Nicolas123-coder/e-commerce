@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 //TODO: arrumar os imports em um index.js 
 import { BrowserRouter } from 'react-router-dom';
 import { UserProvider } from './components/contexts/user';
-import { ProductsProvider } from './components/contexts/products';
+import { CategoriesProvider } from './components/contexts/categories';
 import { CartProvider } from './components/contexts/cart';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,11 +14,11 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <UserProvider>
-        <ProductsProvider>  {/*Esse context ta aqui pq a gente pode pegar valores do usuario nesta ordem de declaração, os produtos pode chegar ao user provider e usar seus dados*/}
+        <CategoriesProvider>  {/*Esse context ta aqui pq a gente pode pegar valores do usuario nesta ordem de declaração, os produtos pode chegar ao user provider e usar seus dados*/}
           <CartProvider>
             <App />
           </CartProvider>
-        </ProductsProvider>
+        </CategoriesProvider>
       </UserProvider>
     </BrowserRouter>
   </React.StrictMode>
