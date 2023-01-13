@@ -13,7 +13,7 @@ const Category = () => {
         setProducts(categories[category])  // seta os produtos da categoria especificada no Useparams
     }, [category, categories])
 
-    return (
+    return ( 
         <Fragment>
             <h2 className='category-title'>{category.toUpperCase()}</h2>
             <div className='category-container'>
