@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Button from '../button/button'
 import CartItem from '../cart-item/cart-item'
-import { CartContext } from '../contexts/cart'
+import { CartContext } from '../../contexts/cart'
 import { CartDropdownContainer, EmptyMessage, CartItems } from './cart-dropdown.styles'
 
 const CartDropdown = () => {

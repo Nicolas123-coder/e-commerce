@@ -1,6 +1,6 @@
 import { useContext, useState, useEffect, Fragment } from 'react'
 import { useParams } from 'react-router-dom'
-import { CategoriesContext } from '../../components/contexts/categories'
+import { CategoriesContext } from '../../contexts/categories'
 import ProductCard from '../../components/product-card/product-card'
 import { CategoryContainer, Title } from './category.styles.js'
 

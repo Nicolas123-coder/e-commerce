@@ -8,7 +8,7 @@ import {
     RemoveButton 
 } from './checkout-item.styles.js'
 
-import { CartContext } from '../contexts/cart'
+import { CartContext } from '../../contexts/cart'
 import { useContext } from 'react'
 
 const CheckoutItem = ({ cartItem }) => {

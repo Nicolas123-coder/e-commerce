@@ -5,9 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 //TODO: arrumar os imports em um index.js 
 import { BrowserRouter } from 'react-router-dom';
-import { UserProvider } from './components/contexts/user';
-import { CategoriesProvider } from './components/contexts/categories';
-import { CartProvider } from './components/contexts/cart';
+import { UserProvider } from './contexts/user';
+import { CategoriesProvider } from './contexts/categories';
+import { CartProvider } from './contexts/cart';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
