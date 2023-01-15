@@ -10,9 +10,8 @@ export const CategoriesProvider = ({ children }) => {
 
     useEffect(() => {
         const getCategoriesMap = async () => {
-            const categoryMap = await getCategoriesAndDocuments()
+            const categoryMap = await getCategoriesAndDocuments() //retorna os objetos no banco em um objeto só
 
-            console.log('opa : ',categoryMap)  //retorna os objetos no banco em um objeto só
             setCategories(categoryMap)
         }
 
