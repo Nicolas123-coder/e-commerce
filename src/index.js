@@ -5,7 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 //TODO: arrumar os imports em um index.js 
 import { BrowserRouter } from 'react-router-dom';
-import { CartProvider } from './contexts/cart';
 import { Provider } from 'react-redux';
 import { store } from './store/store';
 
@@ -14,9 +13,7 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
     <BrowserRouter>
-          <CartProvider>
-            <App />
-          </CartProvider>
+      <App />
     </BrowserRouter>
     </Provider>
   </React.StrictMode>

@@ -1,10 +1,14 @@
-// import { ReactComponent as ShoppingIcon } from '../../assets/shopping-bag.svg'
 import { ShoppingIcon, CartIconContainer, ItemsCount } from './cart-icon.styles.js'
-import { CartContext } from '../../contexts/cart'
 import { useContext } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { selectCartCount,selectIsCartOpen } from '../../store/cart/cart.selector.js'
+import { setIsCartOpen } from '../../store/cart/cart.action.js'
 
 const CartIcon = () => {
-    const { isCartOpen, setIsCartOpen, cartCount } = useContext(CartContext) 
+    const dispatch = useDispatch()
+    
+    const cartCount = useSelector(selectCartCount)
+    const isCartOpen = useSelector(selectIsCartOpen)
 
     // Uma das formas de fazer a contagem dos items no carrinho
 
@@ -12,7 +16,7 @@ const CartIcon = () => {
     //     return result + item.quantity
     // }, 0)
 
-    const toggleIsCartOpen = () => setIsCartOpen(!isCartOpen)
+    const toggleIsCartOpen = () => dispatch(setIsCartOpen(!isCartOpen))
 
     return (
         <CartIconContainer onClick={toggleIsCartOpen}>
