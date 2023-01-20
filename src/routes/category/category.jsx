@@ -1,12 +1,14 @@
 import { useContext, useState, useEffect, Fragment } from 'react'
 import { useParams } from 'react-router-dom'
-import { CategoriesContext } from '../../contexts/categories'
+import { useSelector } from 'react-redux'
+import { selectCategoriesMap } from '../../store/categories/category.selector'
 import ProductCard from '../../components/product-card/product-card'
 import { CategoryContainer, Title } from './category.styles.js'
 
 const Category = () => {
+    const categories = useSelector(selectCategoriesMap)
+
     const { category } = useParams()
-    const { categories } = useContext(CategoriesContext)
     const [ products, setProducts ] = useState(categories[category])
 
     useEffect(() => {
