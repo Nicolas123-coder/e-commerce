@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
-import { getCategoriesAndDocuments } from '../../utils/firebase/firebase'
-import { setCategories } from '../../store/categories/category.action'
+import { fetchCategoriesAsync } from '../../store/categories/category.action'
 import { useDispatch } from 'react-redux'
 import { Routes, Route } from 'react-router-dom'
 import CategoriesPreview from '../categories-preview/categories-preview'
@@ -10,13 +9,7 @@ const Shop = () => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        const getCategoriesMap = async () => {
-            const categoriesArray = await getCategoriesAndDocuments() //retorna os objetos no banco em um objeto só
-            
-            dispatch(setCategories(categoriesArray))
-        }
-
-        getCategoriesMap()
+        dispatch(fetchCategoriesAsync())
     }, [])
 
     return (
