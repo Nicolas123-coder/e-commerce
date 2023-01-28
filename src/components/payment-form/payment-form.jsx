@@ -3,8 +3,8 @@ import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js'
 import { BUTTON_TYPE_CLASSES } from '../button/button.jsx'
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
-import { selectCartTotal } from '../../store/cart/cart.selector.js'
-import { selectCurrentUser } from '../../store/user/user.selector.js'
+import { selectCartTotal } from '../../store/cart/cart.selector'
+import { selectCurrentUser } from '../../store/user/user.selector'
 
 const PaymentForm = () => {
     const stripe = useStripe()
