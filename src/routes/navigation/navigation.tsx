@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom"
 import { Fragment, useContext } from "react"
 import { ReactComponent as CrownLogo } from '../../assets/crown.svg'
-import { NavigationContainer, NavLinks, NavLink, LogoContainer } from './navigation.styles.js'
+import { NavigationContainer, NavLinks, NavLink, LogoContainer } from './navigation.styles'
 import CartIcon from "../../components/cart-icon/cart-icon"
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown"
 import { useSelector, useDispatch } from "react-redux"
