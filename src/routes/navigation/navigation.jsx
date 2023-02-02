@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom"
 import { Fragment, useContext } from "react"
-import { ReactComponent as CrownLogo } from '../../assets/crown.svg'
+import { ReactComponent as FireLogo } from '../../assets/fire.svg'
 import { NavigationContainer, NavLinks, NavLink, LogoContainer } from './navigation.styles.js'
 import CartIcon from "../../components/cart-icon/cart-icon"
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown"
@@ -20,7 +20,7 @@ const Navigation = () => {
       <Fragment>
         <NavigationContainer>
           <LogoContainer to='/'>  
-            <CrownLogo className="logo" />
+            <FireLogo className="logo" />
           </LogoContainer>
           <NavLinks>
               <NavLink to='/shop'>
